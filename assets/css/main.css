@@ -1409,7 +1409,7 @@ input, select, textarea {
 			}
 
 		#wrapper:before {
-			-moz-animation: spinner 1s infinite linear !important;
+			/*-moz-animation: spinner 1s infinite linear !important;
 			-webkit-animation: spinner 1s infinite linear !important;
 			-ms-animation: spinner 1s infinite linear !important;
 			animation: spinner 1s infinite linear !important;
@@ -1417,24 +1417,24 @@ input, select, textarea {
 			-moz-transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
 			-webkit-transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
 			-ms-transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
-			transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
-			background-image: url("images/spinner.svg");
-			background-position: center;
+			transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;*/
+			background-image: url("images/logo.svg");
+			background-position: auto;
 			background-repeat: no-repeat;
 			background-size: contain;
 			content: '';
 			display: block;
 			font-size: 2em;
-			height: 2em;
-			left: 50%;
+			height: 10em;
+			left: 40%;
 			line-height: 2em;
 			margin: -1em 0 0 -1em;
 			opacity: 0;
 			position: fixed;
 			text-align: center;
-			top: 75%;
+			top: 00%;
 			visibility: hidden;
-			width: 2em;
+			width: 10em;
 		}
 
 		body.is-preload #wrapper:before {
@@ -1446,8 +1446,8 @@ input, select, textarea {
 			-webkit-transition-delay: 0.5s !important;
 			-ms-transition-delay: 0.5s !important;
 			transition-delay: 0.5s !important;
-			opacity: 0.25;
-			top: 50%;
+			opacity: 0.8;
+			top: 30%;
 			visibility: visible;
 		}
 
@@ -1581,6 +1581,10 @@ input, select, textarea {
 			#header nav > ul > li a {
 				font-size: 0.9em;
 				padding: 0 1.15em;
+			}
+
+			#wrapper:before {
+				left: 23%;
 			}
 
 	}
