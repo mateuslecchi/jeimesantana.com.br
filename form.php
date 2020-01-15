@@ -14,7 +14,7 @@ $mail->isSMTP();
 // SMTP::DEBUG_OFF = off (for production use)
 // SMTP::DEBUG_CLIENT = client messages
 // SMTP::DEBUG_SERVER = client and server messages
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->SMTPDebug = SMTP::DEBUG_OFF;
 //Set the hostname of the mail server
 $mail->Host = 'smtp.hostinger.com.br';
 //Set the SMTP port number - likely to be 25, 465 or 587
@@ -26,17 +26,18 @@ $mail->Username = 'contato@jeimesantana.com.br';
 //Password to use for SMTP authentication
 $mail->Password = 'jeime123456';
 //Set who the message is to be sent from
-$mail->setFrom('contato@jeimesantana.com.br', $_POST['name']);
+$mail->setFrom('contato@jeimesantana.com.br', utf8_decode($_POST['name']));
 //Set who the message is to be sent to
 $mail->addAddress('contato@jeimesantana.com.br', 'Jeime Santana');
 //Set the subject line
-$mail->Subject = 'Contato de '.$_POST['name'];
+$mail->Subject = 'Contato de '.utf8_decode($_POST['name']);
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 $mail->msgHTML('
-    Nome: '.$_POST['name'].'<br>
+    Nome: '.utf8_decode($_POST['name']).'<br>
     Email: '.$_POST['email'].'<br>
-    Messagem: '.$_POST['message']
+    Contato: '.$_POST['fone'].'<br>
+    Messagem: '.utf8_decode($_POST['message'])
 );
 if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
