@@ -5,6 +5,8 @@ require 'assets/phpmailer/src/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+
+is_null($_POST['wpp'])? $_POST['wpp']='Não':$_POST['wpp']='Sim';
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
@@ -37,6 +39,7 @@ $mail->msgHTML('
     Nome: '.utf8_decode($_POST['name']).'<br>
     Email: '.$_POST['email'].'<br>
     Contato: '.$_POST['fone'].'<br>
+    WhatsApp: '.utf8_decode($_POST['wpp']).'<br>
     Messagem: '.utf8_decode($_POST['message'])
 );
 if (!$mail->send()) {

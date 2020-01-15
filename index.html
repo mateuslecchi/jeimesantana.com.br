@@ -155,16 +155,20 @@
 									<form method="post" action="form.php">
 										<div class="fields">
 											<div class="field half">
-												<input type="text" aria-label="name" name="name" id="name" placeholder="Nome" />
+												<input type="text" aria-label="name" name="name" id="name" placeholder="Nome" required/>
 											</div>
 											<div class="field half">
-												<input type="text" aria-label="email" name="email" id="email" placeholder="Email" />
+												<input type="text" aria-label="email" name="email" id="email" placeholder="Email" required/>
+											</div>
+											<div class="field half">
+												<input type="text" aria-label="fone" name="fone" id="fone" placeholder="Telefone Ex.: 27999999999" />
+											</div>
+											<div class="field half">
+												<input type="checkbox" name="wpp" id="wpp" value="sim" checked/>
+												<label for="wpp">WhatsApp neste telefone</label>
 											</div>
 											<div class="field">
-												<input type="text" aria-label="fone" name="fone" id="fone" placeholder="Telefone, WhatsApp Ex.: 27999999999" />
-											</div>
-											<div class="field">
-												<textarea aria-label="message" name="message" id="message" rows="4" placeholder="Mensagem"></textarea>
+												<textarea aria-label="message" name="message" id="message" rows="3" placeholder="Mensagem" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
