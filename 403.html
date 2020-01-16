@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Jeimes Santana</title>
-		<meta charset="utf-8" />
+      <meta charset="utf-8" />
+      <meta http-equiv="refresh" content="4; URL='http://jeimesantana.com.br/'"/>
 		<meta name="description" content="Fotografias, retratos, entre em contato!">
 		<meta name="keywords" content="foto,fotografia,retrato,retratos">
         <meta name="author" content="Jeime Santana">
@@ -64,6 +65,28 @@
            max-width: 300px;
         }
         </style>
+        <script>
+         function startTimer(duration, display) {
+             var timer = duration, minutes, seconds;
+             setInterval(function () {
+                seconds = parseInt(timer % 60, 10);
+
+                seconds = seconds < 10 ? seconds : seconds;
+
+                display.textContent = seconds;
+
+                if (--timer < 0) {
+                      timer = duration;
+                }
+             }, 1000);
+          }
+
+          window.onload = function () {
+             var fiveMinutes = 3,
+                display = document.querySelector('#time');
+             startTimer(fiveMinutes, display);
+          };
+      </script>
     </head>
 
     <body>
@@ -256,6 +279,7 @@
 
                 <h1>ERRO 403</h1>
                 <p>Acesso não permitido 😏</p>
+                <p><span id="time">3</span> segundos para você sair daqui! 😠</p>
                 <a href="https://jeimesantana.com.br" rel="noopener">Início</a>
             </div>
         </div>
