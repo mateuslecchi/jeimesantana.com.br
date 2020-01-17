@@ -17,7 +17,7 @@ $mail->isSMTP();
 // SMTP::DEBUG_OFF = off (for production use)
 // SMTP::DEBUG_CLIENT = client messages
 // SMTP::DEBUG_SERVER = client and server messages
-$mail->SMTPDebug = SMTP::DEBUG_OFF;
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 //Set the hostname of the mail server
 $mail->Host = $host;
 //Set the SMTP port number - likely to be 25, 465 or 587
@@ -29,7 +29,7 @@ $mail->Username = $emailAc;
 //Password to use for SMTP authentication
 $mail->Password = $emailPass;
 //Set who the message is to be sent from
-$mail->setFrom('contato@jeimesantana.com.br', 'Formulario do Site');
+$mail->setFrom('envio@jeimesantana.com.br', 'Jeime Santana');
 //Set who the message is to be sent to
 $mail->addAddress('contato@jeimesantana.com.br', 'Jeime Santana');
 //Set the subject line
