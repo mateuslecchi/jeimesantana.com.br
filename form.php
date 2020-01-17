@@ -1,5 +1,5 @@
 <?php
-require 'config.inc.php';
+require '../config.inc.php';
 require 'assets/phpmailer/src/Exception.php';
 require 'assets/phpmailer/src/PHPMailer.php';
 require 'assets/phpmailer/src/SMTP.php';
