@@ -24,9 +24,9 @@ $mail->Port = 587;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = 'contato@jeimesantana.com.br';
+$mail->Username = 'xxx';
 //Password to use for SMTP authentication
-$mail->Password = 'jeime123456';
+$mail->Password = 'xxx';
 //Set who the message is to be sent from
 $mail->setFrom('contato@jeimesantana.com.br', utf8_decode($_POST['name']));
 //Set who the message is to be sent to
