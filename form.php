@@ -1,4 +1,5 @@
 <?php
+require 'config.inc.php';
 require 'assets/phpmailer/src/Exception.php';
 require 'assets/phpmailer/src/PHPMailer.php';
 require 'assets/phpmailer/src/SMTP.php';
@@ -18,17 +19,17 @@ $mail->isSMTP();
 // SMTP::DEBUG_SERVER = client and server messages
 $mail->SMTPDebug = SMTP::DEBUG_OFF;
 //Set the hostname of the mail server
-$mail->Host = 'smtp.hostinger.com.br';
+$mail->Host = $host;
 //Set the SMTP port number - likely to be 25, 465 or 587
-$mail->Port = 587;
+$mail->Port = $port;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = 'xxx';
+$mail->Username = $emailAc;
 //Password to use for SMTP authentication
-$mail->Password = 'xxx';
+$mail->Password = $emailPass;
 //Set who the message is to be sent from
-$mail->setFrom('contato@jeimesantana.com.br', utf8_decode($_POST['name']));
+$mail->setFrom('contato@jeimesantana.com.br', 'Formulario do Site');
 //Set who the message is to be sent to
 $mail->addAddress('contato@jeimesantana.com.br', 'Jeime Santana');
 //Set the subject line
